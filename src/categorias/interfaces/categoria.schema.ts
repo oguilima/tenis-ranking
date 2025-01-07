@@ -1,8 +1,8 @@
 import * as mongoose from "mongoose";
 
 export const CategoriaSchema = new mongoose.Schema({
-    categoria: { type: String, unique: true },
-    descricao: { type: String },
+    categoria: {type: String, unique: true},
+    descricao: {type: String},
     eventos: [
         {
             nome: { type: String },
@@ -14,4 +14,4 @@ export const CategoriaSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Jogador"
     }]
-}, { timestamps: true , collection: 'categorias'});
+}, {timestamps: true, collection: 'categorias'});
